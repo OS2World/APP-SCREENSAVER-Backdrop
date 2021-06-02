@@ -1,0 +1,13 @@
+backdrop : backdrop.exe
+
+backdrop.obj: backdrop.c backdrop.h
+        cl -c -G2s -Alfu -W3 -Zi -Od backdrop.c > errors
+
+backdrop.res: backdrop.rc backdrop.h backdrop.bmp
+        rc -r backdrop.rc
+
+backdrop.exe: backdrop.obj backdrop.def backdrop.lnk backdrop.res
+        link @backdrop.lnk
+        rc backdrop.res backdrop.exe
+
+

@@ -1,0 +1,10 @@
+NAME backdrop WINDOWAPI
+
+DESCRIPTION 'Screen Backdrop Program (Graham Welland 9/6/89)'
+
+HEAPSIZE  1024
+STACKSIZE 9000
+
+EXPORTS
+   ClientWndProc     @1
+   FrameSubclassProc @2
